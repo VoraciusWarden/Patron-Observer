@@ -1,6 +1,6 @@
 package subject;
 
-import display.ConditionsDisplay;
+import display.CurrentConditionsDisplay;
 import display.ForecastDisplay;
 import display.HeatIndexDisplay;
 import display.PressureDisplay;
@@ -11,7 +11,7 @@ public class WeatherStation {
         WeatherData weatherData = new WeatherData();
 
 
-        new ConditionsDisplay(weatherData);
+        new CurrentConditionsDisplay(weatherData);
         new ForecastDisplay(weatherData);
         new HeatIndexDisplay(weatherData);
         new PressureDisplay(weatherData);

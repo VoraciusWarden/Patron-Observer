@@ -3,8 +3,7 @@ package display;
 import observer.Observer;
 import subject.WeatherData;
 
-
-public class PressureDisplay implements Observer {
+public class PressureDisplay implements Observer, DisplayElement {
     private float pressure;
 
     public PressureDisplay(WeatherData weatherData) {
@@ -17,7 +16,8 @@ public class PressureDisplay implements Observer {
         display();
     }
 
+    @Override
     public void display() {
-        System.out.println("Presión actual: " + pressure);
+        System.out.println("Presión atmosférica actual: " + pressure + " hPa");
     }
 }

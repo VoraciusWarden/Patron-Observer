@@ -3,8 +3,7 @@ package display;
 import observer.Observer;
 import subject.WeatherData;
 
-
-public class HeatIndexDisplay implements Observer {
+public class HeatIndexDisplay implements Observer, DisplayElement {
     private float heatIndex;
 
     public HeatIndexDisplay(WeatherData weatherData) {
@@ -31,6 +30,7 @@ public class HeatIndexDisplay implements Observer {
             - 0.0000000000481975 * (t * t * t * rh * rh * rh));
     }
 
+    @Override
     public void display() {
         System.out.println("Índice de calor: " + heatIndex);
     }
